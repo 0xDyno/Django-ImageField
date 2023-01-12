@@ -1,0 +1,1 @@
+Example how to upload images to server and save them using Python and Django. Very simplified variant. Took a lot of time to understand all details.
