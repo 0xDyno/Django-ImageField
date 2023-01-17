@@ -5,4 +5,4 @@ folder = "images/"
 
 
 class SaveModel(models.Model):
-    img = models.ImageField(upload_to="app/static/" + folder)
+    img = models.ImageField(upload_to="static/" + folder)

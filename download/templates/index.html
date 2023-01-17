@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to save Images</title>
+</head>
+<body>
+<center>
+
+    <table style="width: 80%; text-align: center;">
+
+        <tr>
+            <td><p>File</p></td>
+            <td><p>URL</p></td>
+        </tr>
+
+        <tr>
+            <td style="width: 50%;">
+                {# That's VERY important to include enctype="multipart/form-data, otherwise it won't work #}
+                {#   here   #}
+                <form action="{% url "index" %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form_pc.as_p }}
+                    <input type="submit" value="submit">
+                </form>
+            </td>
+
+
+            <td style="width: 50%;">
+                <form action="{% url "index" %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form_url.as_p }}
+                    <input type="submit" value="submit">
+                </form>
+            </td>
+        </tr>
+
+    </table>
+
+    <br><br>
+    {% include "all_images.html" %}
+</center>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{{ message }}
+
+{% load static %}
+
+{% for image in all_images %}
+    <img style="height: 200px;" src="{% static image %}" alt="">
+{% endfor %}

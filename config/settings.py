@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'download'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +57,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / 'templates',
-            "app/"
+            "download/"
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -123,7 +123,6 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    "app/static",
 ]
 
 # Default primary key field type
